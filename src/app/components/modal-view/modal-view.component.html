@@ -1,0 +1,41 @@
+<table class="table table-dark" *ngIf="!currentData">
+  <tbody>
+  <tr>
+    <th class="text-center">Select a character from the list.</th>
+  </tr>
+  </tbody>
+</table>
+
+<table class="table table-dark" *ngIf="currentData">
+  <tbody>
+  <tr>
+    <th>Name</th>
+    <td>{{currentData.name}}</td>
+    <td class="text-center" colspan="2" rowspan="5">
+      <img [src]="currentData.image"/>
+    </td>
+  </tr>
+  <tr>
+    <th>Status</th>
+    <td>{{currentData.status}}</td>
+  </tr>
+  <tr>
+    <th>Species</th>
+    <td>{{currentData.species}}</td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td>{{!currentData.type ? 'N/A' : currentData.type}}</td>
+  </tr>
+  <tr>
+    <th>Gender</th>
+    <td>{{currentData.gender}}</td>
+  </tr>
+  <tr>
+    <th>Location</th>
+    <td>{{currentData.location.name}}</td>
+    <th>Origin</th>
+    <td>{{currentData.origin.name}}</td>
+  </tr>
+  </tbody>
+</table>
